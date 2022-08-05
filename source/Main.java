@@ -11,7 +11,7 @@ public class Main {
         int  age = age();
         int num = count();
         test();
-        ansear();
+        answer();
         saveUser (name,age, num);
     }
 
@@ -31,20 +31,20 @@ public class Main {
         int ost1 = scanner.nextInt();
         int ost2 = scanner.nextInt();
         int ost3 = scanner.nextInt();
-        int hu = agge(ost1, ost2, ost3);
-        System.out.println("Your age is " + hu + ": that's a good time to start programming!");
+        int age = agge(ost1, ost2, ost3);
+        System.out.println("Your age is " + age + ": that's a good time to start programming!");
 
-        return hu;
+        return age;
     }
 
     public static int count() {
         System.out.println("Now I will prove to you that I can count to any number you want.");
-        int a = scanner.nextInt();
-        for (int i = 0; i <= a; i++) {
+        int num = scanner.nextInt();
+        for (int i = 0; i <= num; i++) {
             System.out.println(i + "!");
 
         }
-        return a;
+        return num;
     }
 
     public static void test() {
@@ -56,22 +56,22 @@ public class Main {
                 "4. To interrupt the execution of a program.");
     }
 
-    public  static void ansear() {
-        int b = scanner.nextInt();
-        if (b != 2) {
+    public  static void answer() {
+        int answer = scanner.nextInt();
+        if (answer != 2) {
             System.out.println("Please, try again.");
-            answers = answers + b + ",";
-            ansear();
+            answers = answers + answer + ",";
+            answer();
         } else {
             System.out.println("Congratulations, have a nice day!");
-            answers = answers + b + ".";
+            answers = answers + answer + ".";
         }
 
     }
 
     public static int agge(int ost1, int ost2, int ost3) {
-        int a = (ost1 * 70 + ost2 * 21 + ost3 * 15) % 105;
-        return a;
+        int age = (ost1 * 70 + ost2 * 21 + ost3 * 15) % 105;
+        return age;
     }
 
     private static void saveUser(String name, int age, int num) {
